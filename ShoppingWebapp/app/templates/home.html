@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% for category in categories %}
+		<li>
+			<a href="{{url_for('products', category = category['name'])}}">
+				<img src="{{url_for('static', filename = category['img'])}}" height = "188" width = "300">
+				<p>View</p>
+			</a>
+		</li>
+	{% endfor %}
+{% endblock content %} 
